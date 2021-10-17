@@ -1,0 +1,29 @@
+{
+  "name": "tsexplorer",
+  "version": "1.0.0",
+  "description": "A fork of my WpfExplorer in C#",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start:linux": "tsc && npm run copy:linux && electron dist/app",
+    "start:windows": "tsc && npm run copy:windows && electron dist/app",
+    "copy:linux": "cp -r ./src/*.html ./src/css/ ./dist/",
+    "copy:windows": "copy.cmd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VenRoot/TSExplorer.git"
+  },
+  "author": "VenRoot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VenRoot/TSExplorer/issues"
+  },
+  "homepage": "https://github.com/VenRoot/TSExplorer#readme",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "@types/electron": "^1.6.10",
+    "material-components-web": "^13.0.0"
+  }
+}
