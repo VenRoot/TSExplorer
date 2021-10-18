@@ -2,16 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com"/>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com"/> -->
     <link rel="stylesheet" href="../node_modules/material-components-web/dist/material-components-web.min.css"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <script src="../node_modules/material-components-web/dist/material-components-web.min.js"></script>
   <link rel="stylesheet" href="./css/default.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com/ https://fonts.gstatic.com/ 'unsafe-inline';">
     <title>TSExplorer</title>
 </head>
 <body>
-    
+    <div style="height: 5%; width: 100%;">
+        <div id="tb_Ping" style="width: 50%; float: left;">-1ms</div>
+        <div style="width: 50%; float: right;">Suchen Sie nach Dateien</div>
+    </div>
+    <div style="height: 85%; width: 100%;">
+        <ul style="border: black 1px; width: 50%; float: left;" id="ul_Results">
+
+        </ul>
+        
+        <div style="width:50%; float: right;">
+            <input type="text" style="height: 10%; width: 100%;"> <br>
+            <div style="left: 50%;" class="container">
+                <button class="box">Neue Dateien indizieren</button>
+                <button class="box">Settings</button>
+                <button class="box">Hilfe</button>
+                <button class="box">Log Dateien</button>
+            </div>
+            
+            <label for="iExclude">Dateien ausschließen</label>
+            <input type="text" id="iExclude" style="height: 10%; width: 100%;">
+            <ul style="height: 60%;"></ul>
+        </div>
+    </div>
 </body>
 </html>

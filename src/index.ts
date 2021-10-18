@@ -1,4 +1,4 @@
-import { BrowserWindow } from 'electron';
+import { BrowserWindow, ipcMain, dialog } from 'electron';
 
 export default class Main {
     static mainWindow: Electron.BrowserWindow;
@@ -33,3 +33,11 @@ export default class Main {
         Main.application.on('ready', Main.onReady);
     }
 }
+
+let dir;
+
+ipcMain.on("selectDirectory", () => {
+    dir = dialog.showOpenDialog(Main.mainWindow, {
+        properties: ["openDirectory"]
+    })
+})
