@@ -22,8 +22,9 @@
   },
   "homepage": "https://github.com/VenRoot/TSExplorer#readme",
   "devDependencies": {
-    "@tsconfig/node16": "^1.0.2",
-    "@types/electron": "^1.6.10",
-    "material-components-web": "^13.0.0"
+    "material-components-web": "^14.0.0"
+  },
+  "dependencies": {
+    "electron": "^19.0.9"
   }
 }
