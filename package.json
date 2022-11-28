@@ -25,6 +25,6 @@
     "material-components-web": "^14.0.0"
   },
   "dependencies": {
-    "electron": "^19.0.9"
+    "electron": "^19.0.11"
   }
 }
